@@ -4,7 +4,7 @@ import streamlit as st
 from langchain_google_genai import ChatGoogleGenerativeAI
 
 # Let's get the API key from the environment
-gemini_api_key='AIzaSyCpOcjRUsyPPul6GhSYbMjBDGrN2FNlesI'
+gemini_api_key=os.getenv('Google_Api_Key1')
 
 # Let's configure the model
 model = ChatGoogleGenerativeAI(
@@ -27,7 +27,7 @@ Follow these steps:
 
 
 # Design a side bar for all the user parameters
-st.sidebar.header(':red[Enter Your Details]')
+st.sidebar.header('Enter Your Details')
 Name=st.sidebar.text_input('Enter Your Name')
 Gender=st.sidebar.selectbox('Select Your Gender',['Male','Female'])
 Age=st.sidebar.text_input('Enter Your Age')
